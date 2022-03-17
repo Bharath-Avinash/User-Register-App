@@ -1,0 +1,31 @@
+
+<div class = "container">
+    <div class = "row col-lg-12 col-sm-12">
+        <table class = "table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Gender</th>
+                    <th>Address</th>
+                    <th>Hobbies</th>
+                    
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor = "let user of array">
+                    <td>{{user.username}}</td>
+                    <td>{{user.age}}</td>
+                    <td>{{user.gender}}</td>
+                    <td>{{user.address}}</td>
+                    <td ><span *ngFor = "let hobby of user.hobbies" >{{hobby.label}} ,</span></td>
+                    <button class = "btn btn-danger" (click) = "removeUser(user.username)">Delete</button>
+
+                    
+                   
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
